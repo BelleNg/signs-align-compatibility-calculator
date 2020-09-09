@@ -1,0 +1,23 @@
+{
+  "name": "signs-align-compatibility-calculator",
+  "version": "1.0.0",
+  "description": "An app that takes in user data input and calculates the couple’s compatibility percentage/score",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelleNg/signs-align-compatibility-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BelleNg/signs-align-compatibility-calculator/issues"
+  },
+  "homepage": "https://github.com/BelleNg/signs-align-compatibility-calculator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
