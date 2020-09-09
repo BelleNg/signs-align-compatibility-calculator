@@ -4,7 +4,7 @@ const databaseConfig = require('./db.config.js');
 const connection = mysql.createConnection(databaseConfig);
 
 const testDbConnect = (callback) => {
-  connection.query('SELECT price FROM products', (err, results) => {
+  connection.query('SELECT animal FROM zodiac', (err, results) => {
     if (err) {
       console.log('Error in testDbConnect', err);
       callback(err, null);
