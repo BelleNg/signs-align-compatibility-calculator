@@ -6,7 +6,9 @@ import Person2 from './Person2.jsx';
 class CoupleView extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
+ 
   }
 
   //   componentDidMount() {
