@@ -1,6 +1,7 @@
-import CoupleView from './CoupleView.jsx';
 
+import CoupleView from './CoupleView.jsx';
 const React = require('react');
+
 class App extends React.Component {
  render() {
    return (
