@@ -42,7 +42,7 @@ class CoupleView extends React.Component {
     return (
       <div>
         <p>Couple View</p>
-        <button onClick={this.clickHandler}>CALCULATE MY SCORE</button>
+        <button onClick={this.clickHandler}>CALCULATE OUR SHIPPING</button>
 
         <div>
           <span>this is your score:</span> {this.state.score}
