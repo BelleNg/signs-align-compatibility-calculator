@@ -24,6 +24,7 @@ app.get("/testBackendConnection", (req, res) => {
   });
 });
 
+//get zodiac animal by year
 app.get("/api/zodiac/:year", (req, res) => {
   let yearNum = parseInt(req.params.year);
   db.getZodiacAnimal(yearNum, (err, results) => {
@@ -41,6 +42,7 @@ app.get("/api/zodiac/:year", (req, res) => {
   });
 });
 
+//get zodiac couple score
 app.get("/api/score/:couple", (req, res) => {
   let couple = req.params.couple;
   db.getCoupleScore(couple, (err, results) => {
@@ -58,6 +60,7 @@ app.get("/api/score/:couple", (req, res) => {
   });
 });
 
+//get star couple score
 app.get("/api/starscore/:couple", (req, res) => {
   let couple = req.params.couple;
   db.getStarCoupleScore(couple, (err, results) => {
