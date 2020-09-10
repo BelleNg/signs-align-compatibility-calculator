@@ -6,7 +6,7 @@ class CoupleView extends React.Component {
     super(props);
     this.state = {
       coupleAnimal: null,
-      score: null
+      score: null,
     };
     this.clickHandler = this.clickHandler.bind(this);
     this.getScore = this.getScore.bind(this);
@@ -22,7 +22,7 @@ class CoupleView extends React.Component {
   }
 
   clickHandler() {
-    this.getScore()
+    this.getScore();
   }
 
   getScore() {
@@ -48,7 +48,6 @@ class CoupleView extends React.Component {
           <span>this is your score:</span> {this.state.score}
         </div>
       </div>
-
     );
   }
 }

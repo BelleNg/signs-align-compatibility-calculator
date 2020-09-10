@@ -22,10 +22,10 @@ class Person1 extends React.Component {
 
   componentDidUpdate(_, prevState) {
     if (this.state.date !== prevState.date) {
-      this.getZodiac();
       let month = this.state.date.slice(5, 7);
       let day = this.state.date.slice(8, 10);
       this.getStarZodiac(month, day);
+      this.getZodiac();
     }
   }
 
@@ -54,6 +54,7 @@ class Person1 extends React.Component {
       })
       .then(() => {
         this.props.setZodiac(this.state.animal);
+        this.props.setStar(this.state.starZodiac);
       })
       .catch((error) => {
         console.log(error);
