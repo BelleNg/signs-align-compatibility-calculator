@@ -8,8 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       person1zodiac: null,
-      person1Star: null,
       person2zodiac: null,
+      person1Star: null,
       person2Star: null,
     };
 
@@ -37,6 +37,7 @@ class App extends React.Component {
 
   render() {
     let coupleAnimal = this.state.person1zodiac + this.state.person2zodiac;
+    let coupleStar = this.state.person1Star + this.state.person2Star;
     return (
       <div>
         <h1>Hello World</h1>
@@ -48,7 +49,7 @@ class App extends React.Component {
           setZodiac={this.setPerson2Zodiac}
           setStar={this.setPerson2Star}
         />
-        <CoupleView couple={coupleAnimal} />
+        <CoupleView ZodiacCouple={coupleAnimal} starCouple={coupleStar} />
       </div>
     );
   }

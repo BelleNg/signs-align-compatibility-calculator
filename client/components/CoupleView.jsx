@@ -16,8 +16,8 @@ class CoupleView extends React.Component {
   //   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.couple !== prevProps.couple) {
-      this.setState({ coupleAnimal: this.props.couple });
+    if (this.props.ZodiacCouple !== prevProps.ZodiacCouple) {
+      this.setState({ coupleAnimal: this.props.ZodiacCouple });
     }
   }
 
