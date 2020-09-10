@@ -26,12 +26,13 @@ class App extends React.Component {
   }
 
  render() {
+   let coupleAnimal=this.state.person1zodiac + this.state.person2zodiac;
    return (
      <div>
        <h1>Hello World</h1>
        <Person1 setZodiac={this.setPerson1Zodiac}/>
         <Person2 setZodiac={this.setPerson2Zodiac}/>
-       <CoupleView/>
+       <CoupleView couple={coupleAnimal}/>
      </div>
    )
  }
