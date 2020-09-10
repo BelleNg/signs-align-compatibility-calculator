@@ -50,7 +50,7 @@ app.get("/api/score/:couple", (req, res) => {
       } else {
         if (results.length === 0) {
           console.log("couple not in database");
-          res.send({ score: 120 });
+          res.send({ score: null });
         }
         console.log("Successful score query");
         res.status(200).send(results[0]);
