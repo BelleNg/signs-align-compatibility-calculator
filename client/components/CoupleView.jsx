@@ -6,18 +6,20 @@ class CoupleView extends React.Component {
     super(props);
     this.state = {
       coupleAnimal: null,
-      score: null,
+      zodiacScore: null,
+      starCouple: null,
+      starScore: null,
     };
     this.clickHandler = this.clickHandler.bind(this);
     this.getScore = this.getScore.bind(this);
   }
 
-  //   componentDidMount() {
-  //   }
-
   componentDidUpdate(prevProps) {
-    if (this.props.ZodiacCouple !== prevProps.ZodiacCouple) {
-      this.setState({ coupleAnimal: this.props.ZodiacCouple });
+    if (this.props.zodiacCouple !== prevProps.zodiacCouple) {
+      this.setState({ coupleAnimal: this.props.zodiacCouple });
+    }
+    if (this.props.starCouple !== prevProps.starCouple) {
+      this.setState({ starCouple: this.props.starCouple });
     }
   }
 
@@ -27,14 +29,24 @@ class CoupleView extends React.Component {
 
   getScore() {
     let coupleAnimal = this.state.coupleAnimal;
+    let starCouple = this.state.starCouple;
     axios
       .get(`/api/score/${coupleAnimal}`)
       .then((response) => {
-        this.setState({ score: response.data.score || "INVALID" });
+        this.setState({ zodiacScore: response.data.score || "INVALID" });
       })
       .catch((error) => {
         console.log(error);
-        this.setState({ score: null });
+        this.setState({ zodiacScore: null });
+      });
+    axios
+      .get(`/api/starscore/${starCouple}`)
+      .then((response) => {
+        this.setState({ starScore: response.data.star_score || "INVALID" });
+      })
+      .catch((error) => {
+        console.log(error);
+        this.setState({ starScore: null });
       });
   }
 
@@ -45,7 +57,8 @@ class CoupleView extends React.Component {
         <button onClick={this.clickHandler}>CALCULATE OUR SHIPPING</button>
 
         <div>
-          <span>this is your score:</span> {this.state.score}
+          <span>this is your score:</span>{" "}
+          {Math.ceil((this.state.zodiacScore + this.state.starScore) / 2)}
         </div>
       </div>
     );

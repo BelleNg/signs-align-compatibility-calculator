@@ -49,7 +49,7 @@ class App extends React.Component {
           setZodiac={this.setPerson2Zodiac}
           setStar={this.setPerson2Star}
         />
-        <CoupleView ZodiacCouple={coupleAnimal} starCouple={coupleStar} />
+        <CoupleView zodiacCouple={coupleAnimal} starCouple={coupleStar} />
       </div>
     );
   }

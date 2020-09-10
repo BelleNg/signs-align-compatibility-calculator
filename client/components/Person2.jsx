@@ -17,9 +17,6 @@ class Person2 extends React.Component {
     this.getStarZodiac = this.getStarZodiac.bind(this);
   }
 
-  //   componentDidMount() {
-  //   }
-
   componentDidUpdate(_, prevState) {
     if (this.state.date !== prevState.date) {
       let month = this.state.date.slice(5, 7);
