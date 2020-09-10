@@ -32,7 +32,7 @@ const getZodiacAnimal = (year, callback) => {
   );
 };
 
-//query for couple score
+//query for zodiac couple score
 const getCoupleScore = (couple, callback) => {
   connection.query(
     `SELECT score FROM couple_score WHERE couple = '${couple}'`,
@@ -48,6 +48,7 @@ const getCoupleScore = (couple, callback) => {
   );
 };
 
+//query for star couple score
 const getStarCoupleScore = (couple, callback) => {
   connection.query(
     `SELECT star_score FROM star_couple_score WHERE star_couple = '${couple}'`,
