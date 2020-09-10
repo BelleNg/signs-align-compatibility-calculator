@@ -33,7 +33,7 @@ app.get("/api/zodiac/:year", (req, res) => {
     } else {
       if (results.length === 0) {
         console.log("year not in database");
-        res.send({ animal: 'mantis shrimp' });
+        res.send({ animal: "mantis shrimp" });
       }
       console.log("Successful price query");
       res.status(200).send(results[0]);
@@ -42,21 +42,38 @@ app.get("/api/zodiac/:year", (req, res) => {
 });
 
 app.get("/api/score/:couple", (req, res) => {
-    let couple = req.params.couple;
-    db.getCoupleScore(couple, (err, results) => {
-      if (err) {
-        console.log("Error in score route");
-        res.sendStatus(400);
-      } else {
-        if (results.length === 0) {
-          console.log("couple not in database");
-          res.send({ score: null });
-        }
-        console.log("Successful score query");
-        res.status(200).send(results[0]);
+  let couple = req.params.couple;
+  db.getCoupleScore(couple, (err, results) => {
+    if (err) {
+      console.log("Error in score route");
+      res.sendStatus(400);
+    } else {
+      if (results.length === 0) {
+        console.log("couple not in database");
+        res.send({ score: null });
       }
-    });
+      console.log("Successful score query");
+      res.status(200).send(results[0]);
+    }
   });
+});
+
+app.get("/api/starscore/:couple", (req, res) => {
+  let couple = req.params.couple;
+  db.getStarCoupleScore(couple, (err, results) => {
+    if (err) {
+      console.log("Error in score route");
+      res.sendStatus(400);
+    } else {
+      if (results.length === 0) {
+        console.log("couple not in database");
+        res.send({ star_score: null });
+      }
+      console.log("Successful star score query");
+      res.status(200).send(results[0]);
+    }
+  });
+});
 
 app.listen(PORT, function () {
   console.log("Server listening on port:", PORT);

@@ -48,8 +48,24 @@ const getCoupleScore = (couple, callback) => {
   );
 };
 
+const getStarCoupleScore = (couple, callback) => {
+  connection.query(
+    `SELECT star_score FROM star_couple_score WHERE star_couple = '${couple}'`,
+    (err, results) => {
+      if (err) {
+        console.log("Query error in getting star score", err);
+        callback(err, null);
+      } else {
+        console.log("Success query for star score");
+        callback(null, results);
+      }
+    }
+  );
+};
+
 module.exports = {
   testDbConnect,
   getZodiacAnimal,
   getCoupleScore,
+  getStarCoupleScore
 };
