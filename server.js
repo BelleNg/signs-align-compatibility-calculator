@@ -49,7 +49,7 @@ app.get("/api/score/:couple", (req, res) => {
         res.sendStatus(400);
       } else {
         if (results.length === 0) {
-          console.log("year not in database");
+          console.log("couple not in database");
           res.send({ score: 120 });
         }
         console.log("Successful score query");

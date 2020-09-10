@@ -5,7 +5,6 @@ class Person1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        year: null,
       animal: null,
       animalPic: null,
       date: null
@@ -37,6 +36,9 @@ class Person1 extends React.Component {
       .then((response) => {
         this.setState({ animal: response.data.animal || "INVALID" });
       })
+      .then( ()=>{
+        this.props.setZodiac(this.state.animal);
+      })
       .catch((error) => {
         console.log(error);
         this.setState({ animal: null });
@@ -48,7 +50,7 @@ class Person1 extends React.Component {
       <div>
         <p>Person1</p>
         <form onSubmit={this.handleSubmit}>
-          <label for="birthday">Birthday:</label>
+          <label htmlFor="birthday">Birthday:</label>
           <input type="date" ref={this.dateInput1} id="birthday" name="birthday"></input>
           <input type="submit" value="Submit"></input>
         </form>
