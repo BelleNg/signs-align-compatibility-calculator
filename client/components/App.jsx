@@ -56,8 +56,8 @@ class App extends React.Component {
 
 
 
-      <Grid Container>
-        <Grid item sm>
+      <Grid container>
+        <Grid item xs>
           <Paper style={style.Paper}>
         <Person1
           setZodiac={this.setPerson1Zodiac}
@@ -65,7 +65,7 @@ class App extends React.Component {
         />
           </Paper>
         </Grid>
-        <Grid item sm>
+        <Grid item xs>
           <Paper style={style.Paper}>
         <Person2
           setZodiac={this.setPerson2Zodiac}
