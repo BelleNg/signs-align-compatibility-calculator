@@ -65,13 +65,18 @@ class App extends React.Component {
         />
           </Paper>
         </Grid>
-      </Grid>
-
-        <h1>Hello World</h1>
+        <Grid item sm>
+          <Paper style={style.Paper}>
         <Person2
           setZodiac={this.setPerson2Zodiac}
           setStar={this.setPerson2Star}
         />
+        
+          </Paper>
+        </Grid>
+      </Grid>
+
+        <h1>Hello World</h1>
         <CoupleView zodiacCouple={coupleAnimal} starCouple={coupleStar} />
       </div>
     );
