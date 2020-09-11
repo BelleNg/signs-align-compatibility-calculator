@@ -3,6 +3,15 @@ import CoupleView from "./CoupleView.jsx";
 import Person1 from "./Person1.jsx";
 import Person2 from "./Person2.jsx";
 
+import DenseAppBar from "./AppBar.jsx";
+
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+
+const style = {
+  Paper: {padding: 20, marginTop: 10, marginBottom: 10 }
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -35,16 +44,30 @@ class App extends React.Component {
     this.setState({ person2Star: starSign });
   }
 
+
+
   render() {
     let coupleAnimal = this.state.person1zodiac + this.state.person2zodiac;
     let coupleStar = this.state.person1Star + this.state.person2Star;
     return (
       <div>
-        <h1>Hello World</h1>
+        < DenseAppBar />
+
+
+
+
+      <Grid Container>
+        <Grid item sm>
+          <Paper style={style.Paper}>
         <Person1
           setZodiac={this.setPerson1Zodiac}
           setStar={this.setPerson1Star}
         />
+          </Paper>
+        </Grid>
+      </Grid>
+
+        <h1>Hello World</h1>
         <Person2
           setZodiac={this.setPerson2Zodiac}
           setStar={this.setPerson2Star}
