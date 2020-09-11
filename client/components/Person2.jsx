@@ -73,10 +73,12 @@ class Person2 extends React.Component {
           ></input>
           <input type="submit" value="Submit"></input>
         </form>
-        <div>
-          <div>Star zodiac:</div> {this.state.starZodiac}
-          <div>Chinese zodiac:</div> {this.state.animal}
-        </div>
+        <br></br>
+        <span>Star zodiac:</span> {this.state.starZodiac}
+        <br></br>
+        <br></br>
+        <span>Chinese zodiac:</span> {this.state.animal}
+        <br></br>
       </div>
     );
   }

@@ -5,12 +5,12 @@ import Person2 from "./Person2.jsx";
 
 import DenseAppBar from "./AppBar.jsx";
 
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 
 const style = {
-  Paper: {padding: 20, marginTop: 10, marginBottom: 10 }
-}
+  Paper: { padding: 20, marginTop: 10, marginBottom: 10 },
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -44,40 +44,38 @@ class App extends React.Component {
     this.setState({ person2Star: starSign });
   }
 
-
-
   render() {
     let coupleAnimal = this.state.person1zodiac + this.state.person2zodiac;
     let coupleStar = this.state.person1Star + this.state.person2Star;
     return (
       <div>
-        < DenseAppBar />
+        <DenseAppBar />
 
-
-
-
-      <Grid container>
-        <Grid item xs>
-          <Paper style={style.Paper}>
-        <Person1
-          setZodiac={this.setPerson1Zodiac}
-          setStar={this.setPerson1Star}
-        />
-          </Paper>
+        <Grid container>
+          <Grid item xs>
+            <Paper style={style.Paper}>
+              <Person1
+                setZodiac={this.setPerson1Zodiac}
+                setStar={this.setPerson1Star}
+              />
+            </Paper>
+          </Grid>
+          <Grid item xs>
+            <Paper style={style.Paper}>
+              <Person2
+                setZodiac={this.setPerson2Zodiac}
+                setStar={this.setPerson2Star}
+              />
+            </Paper>
+          </Grid>
         </Grid>
-        <Grid item xs>
-          <Paper style={style.Paper}>
-        <Person2
-          setZodiac={this.setPerson2Zodiac}
-          setStar={this.setPerson2Star}
-        />
-        
-          </Paper>
+        <Grid container>
+          <Grid item xs>
+            <Paper style={style.Paper}>
+              <CoupleView zodiacCouple={coupleAnimal} starCouple={coupleStar} />
+            </Paper>
+          </Grid>
         </Grid>
-      </Grid>
-
-        <h1>Hello World</h1>
-        <CoupleView zodiacCouple={coupleAnimal} starCouple={coupleStar} />
       </div>
     );
   }
