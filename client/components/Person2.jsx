@@ -2,8 +2,9 @@ import React from "react";
 import axios from "axios";
 import StarMediaCard from "./CardPerson1.jsx"
 import AnimalMediaCard from "./CardPerson2.jsx"
-const zodiacSign = require("get-zodiac-sign");
+import "./style.css";
 
+const zodiacSign = require("get-zodiac-sign");
 import Grid from "@material-ui/core/Grid";
 
 class Person2 extends React.Component {
@@ -68,8 +69,8 @@ class Person2 extends React.Component {
       <div>
         <p>Person2</p>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="birthday">Birthday:</label>
-          <input
+          <label className="text" htmlFor="birthday">Birthday:</label>
+          <input 
             type="date"
             ref={this.dateInput2}
             id="birthday"
@@ -78,10 +79,10 @@ class Person2 extends React.Component {
           <input type="submit" value="Submit"></input>
         </form>
         <br></br>
-        <span>Star zodiac:</span> {this.state.starZodiac}
+        <span className="text">Star zodiac:</span> {this.state.starZodiac}
         <br></br>
         <br></br>
-        <span>Chinese zodiac:</span> {this.state.animal}
+        <span className="text">Chinese zodiac:</span> {this.state.animal}
         <br></br>
         <Grid container>
           <Grid item xs>

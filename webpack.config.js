@@ -21,6 +21,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
     ],
-  }, //theres a closing bracket below!
+  },
 };

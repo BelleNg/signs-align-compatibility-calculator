@@ -24,6 +24,7 @@
     "axios": "^0.20.0",
     "babel-loader": "^8.1.0",
     "cors": "^2.8.5",
+    "css-loader": "^4.3.0",
     "express": "^4.17.1",
     "get-zodiac-sign": "^1.0.3",
     "mysql": "^2.18.1",
@@ -31,6 +32,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reactdom": "^2.0.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
