@@ -1,3 +1,19 @@
+
+.header {
+    color: rgb(207, 56, 81);
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif; 
+}
+
+
 .text {
-    font-family: "Apple Chancery", cursive;
+    color: rgb(38, 38, 212);
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif; 
+}
+
+.text2 {
+    color: rgb(207, 56, 81);
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, serif;
 }

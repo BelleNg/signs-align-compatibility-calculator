@@ -1,11 +1,13 @@
 import React from "react";
 import axios from "axios";
-import StarMediaCard from "./CardPerson1.jsx"
-import AnimalMediaCard from "./CardPerson2.jsx"
-import "./style.css";
+import StarMediaCard from "./CardPerson1.jsx";
+import AnimalMediaCard from "./CardPerson2.jsx";
+import styles from "./style.css";
 
 const zodiacSign = require("get-zodiac-sign");
+
 import Grid from "@material-ui/core/Grid";
+import Divider from "@material-ui/core/Divider";
 
 class Person2 extends React.Component {
   constructor(props) {
@@ -67,10 +69,14 @@ class Person2 extends React.Component {
   render() {
     return (
       <div>
-        <p>Person2</p>
+        <p className={styles.header}> Other Participant</p>
+        <Divider variant="middle" />
+        <br></br>
         <form onSubmit={this.handleSubmit}>
-          <label className="text" htmlFor="birthday">Birthday:</label>
-          <input 
+          <label className={styles.text} htmlFor="birthday">
+            Birthday:
+          </label>
+          <input
             type="date"
             ref={this.dateInput2}
             id="birthday"
@@ -79,10 +85,16 @@ class Person2 extends React.Component {
           <input type="submit" value="Submit"></input>
         </form>
         <br></br>
-        <span className="text">Star zodiac:</span> {this.state.starZodiac}
+        <span className={styles.text}>Star zodiac:</span>{" "}
+        <span className={styles.text2}>{this.state.starZodiac} </span>
         <br></br>
         <br></br>
-        <span className="text">Chinese zodiac:</span> {this.state.animal}
+        <br></br>
+        <span className={styles.text}>Chinese zodiac:</span>{" "}
+        <span className={styles.text2}>{this.state.animal} </span>
+        <br></br>
+        <br></br>
+        <Divider variant="middle" />
         <br></br>
         <Grid container>
           <Grid item xs>
