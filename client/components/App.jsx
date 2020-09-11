@@ -7,6 +7,7 @@ import DenseAppBar from "./AppBar.jsx";
 
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Box from "@material-ui/core/Box";
 
 const style = {
   Paper: { padding: 20, marginTop: 10, marginBottom: 10 },
@@ -72,7 +73,16 @@ class App extends React.Component {
         <Grid container>
           <Grid item xs>
             <Paper style={style.Paper}>
-              <CoupleView zodiacCouple={coupleAnimal} starCouple={coupleStar} />
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <CoupleView
+                  zodiacCouple={coupleAnimal}
+                  starCouple={coupleStar}
+                />
+              </Box>
             </Paper>
           </Grid>
         </Grid>

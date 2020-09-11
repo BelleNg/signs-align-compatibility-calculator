@@ -1,19 +1,29 @@
-
 .header {
-    color: rgb(207, 56, 81);
-    font-size: xx-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif; 
+  color: rgb(207, 56, 81);
+  font-size: xx-large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, serif;
 }
 
+.header2 {
+  color: rgb(163, 29, 163);
+}
 
 .text {
-    color: rgb(38, 38, 212);
-    font-size: large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif; 
+  color: rgb(38, 38, 212);
+  font-size: large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, serif;
 }
 
 .text2 {
-    color: rgb(207, 56, 81);
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, serif;
+  color: rgb(207, 56, 81);
+  font-size: large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, serif;
+}
+
+.centered {
+    display: flex;
+    align-content: center;
 }

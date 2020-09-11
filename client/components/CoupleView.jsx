@@ -1,5 +1,9 @@
 import React from "react";
 import axios from "axios";
+import styles from "./style.css";
+
+import Button from "@material-ui/core/Button";
+import Box from "@material-ui/core/Box";
 
 class CoupleView extends React.Component {
   constructor(props) {
@@ -52,15 +56,25 @@ class CoupleView extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>Couple View</p>
-        <button onClick={this.clickHandler}>CALCULATE OUR SHIPPING</button>
-
-        <div>
-          <span>this is your score:</span>{" "}
-          {Math.ceil((this.state.zodiacScore + this.state.starScore) / 2)}
+      <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column">
+        <div className={styles.centered}>
+          <p className={styles.header}>
+            Compatibility Score:{" "}
+            <span className={styles.header2}>
+              {Math.ceil((this.state.zodiacScore + this.state.starScore) / 2)}
+            </span>
+          </p>
         </div>
-      </div>
+          <div className={styles.centered}>
+            <Button
+              onClick={this.clickHandler}
+              variant="contained"
+              color="primary"
+            >
+              CALCULATE YOUR SCORE
+            </Button>
+          </div>
+      </Box>
     );
   }
 }
