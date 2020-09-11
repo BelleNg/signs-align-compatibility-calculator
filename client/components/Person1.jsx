@@ -1,6 +1,10 @@
 import React from "react";
 import axios from "axios";
+import StarMediaCard from "./CardPerson1.jsx"
+import AnimalMediaCard from "./CardPerson2.jsx"
 const zodiacSign = require("get-zodiac-sign");
+
+import Grid from "@material-ui/core/Grid";
 
 class Person1 extends React.Component {
   constructor(props) {
@@ -79,6 +83,8 @@ class Person1 extends React.Component {
         <br></br>
         <span>Chinese zodiac:</span> {this.state.animal}
         <br></br>
+        < AnimalMediaCard/>
+        < StarMediaCard />
       </div>
     );
   }
