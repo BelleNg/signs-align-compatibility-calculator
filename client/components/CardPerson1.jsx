@@ -22,18 +22,17 @@ export default function StarMediaCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Horoscopes"
           height="140"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfVJJ710QhqKCsuemb_yivSXxqBbbfA4kOhA&usqp=CAU"
-          title="Contemplative Reptile"
+          title="Star Sign"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          Astrological sign
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Etiam sit amet imperdiet orci, eget ultrices diam. Phasellus vestibulum aliquam massa. Vestibulum quis felis at lacus tincidunt sagittis. 
           </Typography>
         </CardContent>
       </CardActionArea>

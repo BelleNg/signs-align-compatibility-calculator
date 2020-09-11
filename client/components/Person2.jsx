@@ -83,8 +83,14 @@ class Person2 extends React.Component {
         <br></br>
         <span>Chinese zodiac:</span> {this.state.animal}
         <br></br>
-        < AnimalMediaCard />
-        < StarMediaCard />
+        <Grid container>
+          <Grid item xs>
+            <AnimalMediaCard />
+          </Grid>
+          <Grid item xs>
+            <StarMediaCard />
+          </Grid>
+        </Grid>
       </div>
     );
   }
