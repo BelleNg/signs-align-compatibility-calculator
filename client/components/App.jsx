@@ -3,6 +3,7 @@ import CoupleView from "./CoupleView.jsx";
 import Person1 from "./Person1.jsx";
 import Person2 from "./Person2.jsx";
 
+
 import DenseAppBar from "./AppBar.jsx";
 
 import Grid from "@material-ui/core/Grid";
@@ -10,7 +11,7 @@ import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 
 const style = {
-  Paper: { padding: 20, marginTop: 10, marginBottom: 10 },
+  Paper: { padding: 15, marginTop: 5, marginBottom: 10 },
 };
 
 class App extends React.Component {

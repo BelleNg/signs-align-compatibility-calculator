@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import StarMediaCard from "./CardPerson1.jsx";
-import AnimalMediaCard from "./CardPerson2.jsx";
+import StarMediaCard from "./StarMediaCard.jsx";
+import AnimalMediaCard from "./AnimalMediaCard.jsx";
 import styles from "./style.css";
 
 const zodiacSign = require("get-zodiac-sign");
