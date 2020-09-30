@@ -6,8 +6,18 @@ import styles from "./style.css";
 
 const zodiacSign = require("get-zodiac-sign");
 
+import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
+
+const cardStyles = theme => ({
+  card: {
+    margin: 16,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between"
+  }
+});
 
 class Person2 extends React.Component {
   constructor(props) {
@@ -67,6 +77,7 @@ class Person2 extends React.Component {
   }
 
   render() {
+    const { classes } = this.props;
     return (
       <div>
         <p className={styles.header}> Other Participant</p>
@@ -97,10 +108,10 @@ class Person2 extends React.Component {
         <Divider variant="middle" />
         <br></br>
         <Grid container>
-          <Grid item xs>
+          <Grid item xs className={classes.card}>
             <AnimalMediaCard />
           </Grid>
-          <Grid item xs>
+          <Grid item xs className={classes.card}>
             <StarMediaCard />
           </Grid>
         </Grid>
@@ -109,4 +120,4 @@ class Person2 extends React.Component {
   }
 }
 
-export default Person2;
+export default withStyles(cardStyles)(Person2);
