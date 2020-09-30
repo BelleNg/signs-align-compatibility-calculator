@@ -18,7 +18,7 @@ export default function StarMediaCard() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <CardContent className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -44,6 +44,6 @@ export default function StarMediaCard() {
           Learn More
         </Button>
       </CardActions>
-    </Card>
+    </CardContent>
   );
 }

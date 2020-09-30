@@ -7,6 +7,7 @@ import styles from "./style.css";
 const zodiacSign = require("get-zodiac-sign");
 
 import { withStyles } from "@material-ui/core/styles";
+import Card from '@material-ui/core/Card';
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
 
@@ -108,10 +109,10 @@ class Person2 extends React.Component {
         <Divider variant="middle" />
         <br></br>
         <Grid container>
-          <Grid item xs className={classes.card}>
+          <Grid item xs component={Card} className={classes.card}>
             <AnimalMediaCard />
           </Grid>
-          <Grid item xs className={classes.card}>
+          <Grid item xs component={Card} className={classes.card}>
             <StarMediaCard />
           </Grid>
         </Grid>
