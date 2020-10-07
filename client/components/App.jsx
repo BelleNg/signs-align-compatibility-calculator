@@ -1,7 +1,7 @@
 import React from "react";
 import CoupleView from "./CoupleView.jsx";
-import Person1 from "./Person1.jsx";
-import Person2 from "./Person2.jsx";
+import Person from "./Person.jsx";
+
 
 
 import DenseAppBar from "./AppBar.jsx";
@@ -56,7 +56,7 @@ class App extends React.Component {
         <Grid container>
           <Grid item xs>
             <Paper style={style.Paper}>
-              <Person1
+              <Person
                 setZodiac={this.setPerson1Zodiac}
                 setStar={this.setPerson1Star}
               />
@@ -64,7 +64,7 @@ class App extends React.Component {
           </Grid>
           <Grid item xs>
             <Paper style={style.Paper}>
-              <Person1
+              <Person
                 setZodiac={this.setPerson2Zodiac}
                 setStar={this.setPerson2Star}
               />

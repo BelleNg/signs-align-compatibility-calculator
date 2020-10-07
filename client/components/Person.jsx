@@ -19,7 +19,7 @@ const cardStyles = theme => ({
   }
 });
 
-class Person extends React.Component {
+class Perso extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
