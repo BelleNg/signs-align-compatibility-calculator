@@ -64,7 +64,7 @@ class App extends React.Component {
           </Grid>
           <Grid item xs>
             <Paper style={style.Paper}>
-              <Person2
+              <Person1
                 setZodiac={this.setPerson2Zodiac}
                 setStar={this.setPerson2Star}
               />
