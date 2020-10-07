@@ -109,7 +109,7 @@ class Person extends React.Component {
         <br></br>
         <Grid container>
           <Grid item xs component={Card} className={classes.card}>
-            <AnimalMediaCard />
+            <AnimalMediaCard animalName={this.state.animal}/>
           </Grid>
           <Grid item xs component={Card} className={classes.card}>
             <StarMediaCard />

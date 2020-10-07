@@ -14,9 +14,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function AnimalMediaCard() {
+
+
+export default function AnimalMediaCard(props) {
   const classes = useStyles();
 
+  const animal = props.animalName || "zodiac";
+  const animalImage = `./animals/${animal}.jpg`;
+  
   return (
     <CardContent className={classes.root}>
       <CardActionArea>
@@ -24,8 +29,8 @@ export default function AnimalMediaCard() {
           component="img"
           alt="zodiac"
           height="160"
-          // image="./animals/pig.jpg"
-          image="https://previews.123rf.com/images/artsholice/artsholice1311/artsholice131100026/23873098-cute-twelve-animals-in-chinese-zodiac-no-2.jpg"
+          image={animalImage}
+          // image="./animals/dog.jpg"
           title="Zodiac"
         />
         <CardContent>
