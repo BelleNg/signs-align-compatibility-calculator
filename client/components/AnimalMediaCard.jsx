@@ -24,6 +24,7 @@ export default function AnimalMediaCard() {
           component="img"
           alt="zodiac"
           height="160"
+          // image="./animals/pig.jpg"
           image="https://previews.123rf.com/images/artsholice/artsholice1311/artsholice131100026/23873098-cute-twelve-animals-in-chinese-zodiac-no-2.jpg"
           title="Zodiac"
         />
