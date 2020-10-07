@@ -112,7 +112,7 @@ class Person extends React.Component {
             <AnimalMediaCard animalName={this.state.animal}/>
           </Grid>
           <Grid item xs component={Card} className={classes.card}>
-            <StarMediaCard />
+            <StarMediaCard horoscopeName={this.state.starZodiac}/>
           </Grid>
         </Grid>
       </div>

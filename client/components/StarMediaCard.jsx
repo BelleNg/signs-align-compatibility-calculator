@@ -14,8 +14,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StarMediaCard() {
+export default function StarMediaCard(props) {
   const classes = useStyles();
+
+  const horoscope = props.horoscopeName || "Horoscope";
+  const horoscopeImage = `./astrology/${horoscope}.jpg`;
 
   return (
     <CardContent className={classes.root}>
@@ -24,7 +27,8 @@ export default function StarMediaCard() {
           component="img"
           alt="Horoscopes"
           height="160"
-          image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfVJJ710QhqKCsuemb_yivSXxqBbbfA4kOhA&usqp=CAU"
+          image={horoscopeImage}
+          //image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfVJJ710QhqKCsuemb_yivSXxqBbbfA4kOhA&usqp=CAU"
           title="Star Sign"
         />
         <CardContent>
