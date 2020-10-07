@@ -23,7 +23,7 @@ export default function StarMediaCard() {
         <CardMedia
           component="img"
           alt="Horoscopes"
-          height="140"
+          height="160"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfVJJ710QhqKCsuemb_yivSXxqBbbfA4kOhA&usqp=CAU"
           title="Star Sign"
         />

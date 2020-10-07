@@ -30,7 +30,6 @@ export default function AnimalMediaCard(props) {
           alt="zodiac"
           height="160"
           image={animalImage}
-          // image="./animals/dog.jpg"
           title="Zodiac"
         />
         <CardContent>
