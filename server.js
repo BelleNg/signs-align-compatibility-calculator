@@ -24,23 +24,31 @@ app.get("/testBackendConnection", (req, res) => {
   });
 });
 
-//get zodiac animal by year
+//get zodiac animal by year // original code
+// app.get("/api/zodiac/:year", (req, res) => {
+//   let yearNum = parseInt(req.params.year);
+//   db.getZodiacAnimal(yearNum, (err, results) => {
+//     if (err) {
+//       console.log("Error in price route");
+//       res.sendStatus(400);
+//     } else {
+//       if (results.length === 0) {
+//         console.log("year not in database");
+//         res.send({ animal: "mantis shrimp" });
+//       }
+//       console.log("Successful price query");
+//       res.status(200).send(results[0]);
+//     }
+//   });
+// });
+
 app.get("/api/zodiac/:year", (req, res) => {
   let yearNum = parseInt(req.params.year);
-  db.getZodiacAnimal(yearNum, (err, results) => {
-    if (err) {
-      console.log("Error in price route");
-      res.sendStatus(400);
-    } else {
-      if (results.length === 0) {
-        console.log("year not in database");
-        res.send({ animal: "mantis shrimp" });
-      }
-      console.log("Successful price query");
-      res.status(200).send(results[0]);
-    }
-  });
+  const zodiac = ['monkey', 'rooster', 'dog', 'pig', 'rat', 'ox', 'tiger', 'rabbit', 'dragon', 'snake', 'horse', 'goat' ];
+  res.status(200).send({ animal: zodiac[yearNum % 12] });
 });
+
+
 
 //get zodiac couple score
 app.get("/api/score/:couple", (req, res) => {

@@ -16,21 +16,21 @@ const testDbConnect = (callback) => {
   });
 };
 
-//Make sure id is an integer
-const getZodiacAnimal = (year, callback) => {
-  connection.query(
-    `SELECT animal FROM zodiac WHERE id = ${year}`,
-    (err, results) => {
-      if (err) {
-        console.log("Query error in getting zodiac by year", err);
-        callback(err, null);
-      } else {
-        console.log("Success query for zodiac");
-        callback(null, results);
-      }
-    }
-  );
-};
+//Make sure id is an integer // original code
+// const getZodiacAnimal = (year, callback) => {
+//   connection.query(
+//     `SELECT animal FROM zodiac WHERE id = ${year}`,
+//     (err, results) => {
+//       if (err) {
+//         console.log("Query error in getting zodiac by year", err);
+//         callback(err, null);
+//       } else {
+//         console.log("Success query for zodiac");
+//         callback(null, results);
+//       }
+//     }
+//   );
+// };
 
 //query for zodiac couple score
 const getCoupleScore = (couple, callback) => {
@@ -66,7 +66,7 @@ const getStarCoupleScore = (couple, callback) => {
 
 module.exports = {
   testDbConnect,
-  getZodiacAnimal,
+  // getZodiacAnimal,
   getCoupleScore,
   getStarCoupleScore
 };
