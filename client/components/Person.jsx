@@ -99,11 +99,8 @@ class Person extends React.Component {
         <span className={styles.text}>Star zodiac:</span>{" "}
         <span className={styles.text2}>{this.state.starZodiac} </span>
         <br></br>
-        <br></br>
-        <br></br>
         <span className={styles.text}>Chinese zodiac:</span>{" "}
         <span className={styles.text2}>{this.state.animal} </span>
-        <br></br>
         <br></br>
         <Divider variant="middle" />
         <br></br>
